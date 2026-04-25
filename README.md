@@ -39,32 +39,8 @@ card-gen/
 ├── index.html
 ├── style.css
 ├── script.js
-├── assets/
-│   └── fonts/
 └── README.md
 ```
-
----
-
-## 🚀 Como rodar
-
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/card-gen.git
-
-# Abra no navegador
-open index.html
-```
-
-Ou acesse pelo GitHub Pages: `https://seu-usuario.github.io/card-gen`
-
----
-
-## 📸 Preview
-
-> _(adicionar screenshot aqui quando o projeto estiver em andamento)_
-
----
 
 ## 📋 Roadmap
 
@@ -82,4 +58,4 @@ Ou acesse pelo GitHub Pages: `https://seu-usuario.github.io/card-gen`
 - [ ] Implementar download PNG com Canvas API
 - [ ] Adicionar modo claro/escuro
 - [ ] Deploy no GitHub Pages
-- [ ] 
+
