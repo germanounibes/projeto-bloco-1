@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,46 +8,46 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-<form id="meuForm>
-  <input type="text" id="nome" name="nome" placeholder="Nome Completo"><br><br>
+    <div id="formulario">
+        <form id="meuForm">
+            <input type=" text" id="nome" name="nome" placeholder="Nome Completo"><br><br>
 
-  <input type="text" id="cargo" name="cargo" placeholder="Cargo"><br><br>
+            <input type="text" id="cargo" name="cargo" placeholder="Cargo"><br><br>
 
-  <input type="text" id="empresa" name="empresa" placeholder="Nome da Empresa"><br><br>
+            <input type="text" id="empresa" name="empresa" placeholder="Nome da Empresa"><br><br>
 
-  <input type="email" id="email" name="email" placeholder="E-mail"><br><br>
+            <input type="email" id="email" name="email" placeholder="E-mail"><br><br>
+        </form>
 
-  <input type="submit" value="aperta">
-</form> 
-<br>
-<div id="carta">
-<h2 id="nomeH">nome</h2>
-<br>
-<h2 id="cargoH">cargo</h2>
-<br>
-<h2 id="empresaH">empresa</h2>
-<br>
-<h2 id="emailH">email</h2>
-</div>
+        <button onclick="fun()">aperta</button>
+    </div>
+    <br>
+    <div id="carta">
+        <h2 id="nomeH">Nome Completo</h2>
+        
+        <p id="cargoH">Seu Cargo</p>
+
+        <div class="info">
+            <span id="empresaH">Nome da Empresa</span>
+            <br>
+            <span id="emailH">seu@email.com</span>
+        </div>
+    </div>
     <script>
-        const nome = document.getElementById('nome');
-        const cargo = document.getElementById('cargo');
-        const nome = document.getElementById('empresa');
-        const cargo = document.getElementById('cargo');
+        function fun() {
+            var nomeV = document.getElementById('nome').value;
+            var cargoV = document.getElementById('cargo').value;
+            var empresaV = document.getElementById('empresa').value;
+            var emailV = document.getElementById('email').value;
 
-        const form = document.getElementById('meuForm');
-
-        form.addEventListener('submit', function(event) {
-        // 1. Impede a página de recarregar
-        event.preventDefault();
-
-        function carta() {
-            document.getElementById('nomeH').innerText = nome;
-            document.getElementById('cargoH').innerText = cargo;
-            document.getElementById('empresaH').innerText = empresa;
-            document.getElementById('emailH').innerText = email;
-        }
+            document.getElementById('nomeH').innerText = (nomeV);
+            document.getElementById('cargoH').innerText = (cargoV);
+            document.getElementById('empresaH').innerText = (empresaV);
+            document.getElementById('emailH').innerText = (emailV);
+        };
     </script>
 </body>
+
 </html>
