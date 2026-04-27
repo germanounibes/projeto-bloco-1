@@ -5,10 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">k
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    
-    <script src="script.js"></script>
+<form id="meuForm>
+  <input type="text" id="nome" name="nome" placeholder="Nome Completo"><br><br>
+
+  <input type="text" id="cargo" name="cargo" placeholder="Cargo"><br><br>
+
+  <input type="text" id="empresa" name="empresa" placeholder="Nome da Empresa"><br><br>
+
+  <input type="email" id="email" name="email" placeholder="E-mail"><br><br>
+
+  <input type="submit" value="aperta">
+</form> 
+<br>
+<div id="carta">
+<h2 id="nomeH">nome</h2>
+<br>
+<h2 id="cargoH">cargo</h2>
+<br>
+<h2 id="empresaH">empresa</h2>
+<br>
+<h2 id="emailH">email</h2>
+</div>
+    <script>
+        const nome = document.getElementById('nome');
+        const cargo = document.getElementById('cargo');
+        const nome = document.getElementById('empresa');
+        const cargo = document.getElementById('cargo');
+
+        const form = document.getElementById('meuForm');
+
+        form.addEventListener('submit', function(event) {
+        // 1. Impede a página de recarregar
+        event.preventDefault();
+
+        function carta() {
+            document.getElementById('nomeH').innerText = nome;
+            document.getElementById('cargoH').innerText = cargo;
+            document.getElementById('empresaH').innerText = empresa;
+            document.getElementById('emailH').innerText = email;
+        }
+    </script>
 </body>
 </html>
