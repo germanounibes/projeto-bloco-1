@@ -14,10 +14,9 @@ Projeto desenvolvido como parte do **Bloco 01 — Base Sólida** do plano de est
 
 ## ✨ Funcionalidades
 
-- [ ] Formulário com nome, cargo, empresa, e-mail, telefone e LinkedIn
-- [ ] Preview ao vivo do cartão enquanto o usuário digita
+- [X] Formulário com nome, cargo, empresa e e-mail
+- [X] Preview ao vivo do cartão enquanto o usuário digita
 - [ ] Seletor de paleta de cores / tema do cartão
-- [ ] Seletor de layout (horizontal / vertical)
 - [ ] Download do cartão como imagem PNG (via Canvas API)
 - [ ] Modo claro / escuro na interface
 
@@ -45,9 +44,9 @@ card-gen/
 ## 📋 Roadmap
 
 ### Fase 1 — estrutura base
-- [ ] Montar HTML semântico do formulário e do preview
-- [ ] Estilizar layout responsivo com Grid/Flexbox
-- [ ] Conectar inputs ao preview via JS (live update)
+- [x] Montar HTML semântico do formulário e do preview
+- [x] Estilizar layout responsivo com Grid/Flexbox
+- [x] Conectar inputs ao preview via JS (live update)
 
 ### Fase 2 — recursos visuais
 - [ ] Implementar seletor de cores com CSS custom properties
