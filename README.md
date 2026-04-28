@@ -17,7 +17,7 @@ Projeto desenvolvido como parte do **Bloco 01 — Base Sólida** do plano de est
 - [x] Formulário com nome, cargo, empresa, e-mail, telefone e LinkedIn
 - [x] Preview ao vivo do cartão enquanto o usuário digita
 - [x] Seletor de paleta de cores / tema do cartão
-- [ ] Download do cartão como imagem PNG (via Canvas API)
+- [x] Download do cartão
 - [ ] Modo claro / escuro na interface
 
 ---
@@ -53,7 +53,7 @@ card-gen/
 - [x] Adicionar transições e animações
 
 ### Fase 3 — exportação e polish
-- [ ] Implementar download PNG com Canvas API
+- [x] Implementar download
 - [ ] Adicionar modo claro/escuro
-- [ ] Deploy no GitHub Pages
+- [x] Deploy no GitHub Pages
 
