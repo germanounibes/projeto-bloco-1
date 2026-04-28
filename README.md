@@ -14,9 +14,9 @@ Projeto desenvolvido como parte do **Bloco 01 — Base Sólida** do plano de est
 
 ## ✨ Funcionalidades
 
-- [X] Formulário com nome, cargo, empresa e e-mail
-- [X] Preview ao vivo do cartão enquanto o usuário digita
-- [ ] Seletor de paleta de cores / tema do cartão
+- [x] Formulário com nome, cargo, empresa, e-mail, telefone e LinkedIn
+- [x] Preview ao vivo do cartão enquanto o usuário digita
+- [x] Seletor de paleta de cores / tema do cartão
 - [ ] Download do cartão como imagem PNG (via Canvas API)
 - [ ] Modo claro / escuro na interface
 
@@ -49,9 +49,8 @@ card-gen/
 - [x] Conectar inputs ao preview via JS (live update)
 
 ### Fase 2 — recursos visuais
-- [ ] Implementar seletor de cores com CSS custom properties
-- [ ] Adicionar transições e animações no preview
-- [ ] Criar variações de layout do cartão
+- [x] Implementar seletor de cores com CSS custom properties
+- [x] Adicionar transições e animações
 
 ### Fase 3 — exportação e polish
 - [ ] Implementar download PNG com Canvas API
