@@ -14,34 +14,26 @@ body {
     background-repeat: no-repeat;
     margin: 0;
     ::selection{
-        background-color: #2758c4;
-        color: aliceblue;
+        background-color: black;
+        color: white;
     }  
 }
 h1 {
-    font-family: 'Inter', sans-serif; /* Uma fonte bem moderna */
-    font-size: 4rem; /* Bem grande */
+    font-size: 4rem;
     font-weight: 800;
-    letter-spacing: -2px; /* Letras juntinhas pra dar impacto */
-    background: linear-gradient(90deg, #013ec2, #2758c4, #29618f);
-    -webkit-background-clip: text; /* Faz o degradê ficar só na letra */
-    -webkit-text-fill-color: transparent; /* Deixa o fundo do texto transparente */
-    background-size: 200% auto;
-    animation: gradient Move 3s linear infinite; /* Faz o degradê "andar" */
-}
-
-@keyframes gradientMove {
-    to { background-position: 200% center; }
+    color: #2758c4;
 }
 #carta{
     text-align: center;
     background-color: rgba(240, 248, 255, 0.788);
-    width: 30vw;
+    width: 85mm;
+    height: 55mm;
     border-radius: 20px;
     padding: 3%;
     font-weight: bolder;
     box-shadow: 5px 5px 5px rgba(150, 191, 255, 0.685);
     box-shadow: inset 25px 25px rgba(55, 132, 255, 0.685);
+    transition: all 0.2s;
 }
 input{
     border-radius: 50px;
@@ -55,9 +47,11 @@ input{
 }
 input:focus{
     outline: none;
+    transition: all 0.2s;
 }
 input:focus::placeholder {
-  color: rgba(0, 0, 0, 0.11);
+    color: rgba(0, 0, 0, 0.11);
+    transition: all 0.2s;
 
 }
 #formulario{
@@ -84,21 +78,41 @@ button{
 button:hover{
     height: 7vh;
     width: 22vw;
+    background-color: rgba(0, 52, 141, 0.37);  
+}
+#envia{
+    background-color: rgb(35, 84, 163);
+}
+#envia:hover{
+    background-color: rgba(0, 52, 141, 0.37);  
 }
 #nomeH{
-    font-size: 3rem;
+    font-size: 39.6px;
     margin-bottom: 0;
 }
 #cargoH{
     margin-top: 0;
-    font-size: 1.2rem;
-    color: rgb(0, 73, 190);
+    font-size: 17.2px;
+    color: rgba(94, 94, 94, 0.685);
 }
 #empresaH{
-    font-size: 1.8rem;
-    color: rgba(92, 154, 255, 0.685);
+    font-size: 26.8px;
+    color: rgba(46, 46, 46, 0.685);
 }
 #emailH{
-    font-size: 1.5rem;
-    color: rgba(92, 154, 255, 0.685);
+    font-size: 22px;
+    color: rgba(46, 46, 46, 0.685);
+}
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #carta, #carta * {
+    visibility: visible;
+  }
+  #carta {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
 }
