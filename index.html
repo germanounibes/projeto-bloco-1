@@ -21,16 +21,16 @@
 
             <input type="email" id="email" name="email" placeholder="E-mail"><br><br>
         </form>
-
         <button onclick="fun()">Enviar</button>
         <br>
-        <button onclick="window.print()" style="background-color: rgb(35, 84, 163);">Imprimir Cartão</button>
-
+        <button onclick="window.print()" id="envia">Imprimir</button>
+        <br>
+        <input type="color" id="colorPicker" value="#000000" style="width: 7%; height: 4.5vh; background-color: black;"> 
     </div>
     <br>
     <div id="carta">
         <h2 id="nomeH">Nome Completo</h2>
-        
+
         <p id="cargoH">Seu Cargo</p>
 
         <div class="info">
@@ -39,6 +39,7 @@
             <span id="emailH">seu@email.com</span>
         </div>
     </div>
+    <br><br>
     <script>
         function fun() {
             var nomeV = document.getElementById('nome').value;
@@ -51,6 +52,15 @@
             document.getElementById('empresaH').innerText = (empresaV);
             document.getElementById('emailH').innerText = (emailV);
         };
+        const colorPicker = document.getElementById("colorPicker");
+        const component = document.getElementById("carta");
+
+        colorPicker.addEventListener("input", (event) => {
+            const cor = event.target.value;
+            // Estrutura: X Y Blur Cor
+            component.style.boxShadow = `inset 25px 25px ${cor}`;
+        });
+
     </script>
 </body>
 
