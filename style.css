@@ -1,134 +1,170 @@
-html{
-    height: 100%;
-}
+    html {
+        height: 100%;
+    }
 
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(135deg, #f5f7fa 0%, rgb(150, 191, 255) 100%);
-    background-attachment: fixed;
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    margin: 0;
-    ::selection{
-        background-color: black;
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: linear-gradient(135deg, #f5f7fa 0%, rgb(150, 191, 255) 100%);
+        background-attachment: fixed;
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        margin: 0;
+
+        ::selection {
+            background-color: black;
+            color: white;
+        }
+    }
+
+    h1 {
+        margin: 1px 0px 0px 0px;
+        font-size: 4rem;
+        font-weight: 800;
+        color: #2758c4;
+    }
+
+    #carta {
+        text-align: center;
+        background-color: rgba(240, 248, 255, 0.788);
+        width: 85mm;
+        height: 55mm;
+        border-radius: 20px;
+        padding: 3%;
+        font-weight: bolder;
+        box-shadow: 5px 5px 5px rgba(150, 191, 255, 0.685);
+        box-shadow: inset 25px 25px rgba(55, 132, 255, 0.685);
+        transition: all 0.2s;
+    }
+
+    input {
+        border-radius: 50px;
+        border: 0;
+        height: 5vh;
+        width: 30vw;
+        text-align: center;
+        font-size: 110%;
+        box-shadow: 5px 5px 5px rgba(150, 191, 255, 0.685);
+        transition: all 0.2s;
+    }
+
+    input:focus {
+        outline: none;
+        transition: all 0.2s;
+    }
+
+    input:focus::placeholder {
+        color: rgba(0, 0, 0, 0.11);
+        transition: all 0.2s;
+
+    }
+
+    #formulario {
+        margin-top: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    .botao {
+        background-color: rgb(105, 163, 255);
+        border-radius: 50px;
+        border: 0;
+        height: 5vh;
+        width: 20vw;
+        text-align: center;
+        box-shadow: 5px 5px 5px rgba(150, 191, 255, 0.685);
         color: white;
-    }  
-}
-h1 {
-    margin: 1px 0px 0px 0px;
-    font-size: 4rem;
-    font-weight: 800;
-    color: #2758c4;
-}
-#carta{
-    text-align: center;
-    background-color: rgba(240, 248, 255, 0.788);
-    width: 85mm;
-    height: 55mm;
-    border-radius: 20px;
-    padding: 3%;
-    font-weight: bolder;
-    box-shadow: 5px 5px 5px rgba(150, 191, 255, 0.685);
-    box-shadow: inset 25px 25px rgba(55, 132, 255, 0.685);
-    transition: all 0.2s;
-}
-input{
-    border-radius: 50px;
-    border: 0;
-    height: 5vh;
-    width: 30vw;
-    text-align: center;
-    font-size: 110%;
-    box-shadow: 5px 5px 5px rgba(150, 191, 255, 0.685);
-    transition: all 0.2s;
-}
-input:focus{
-    outline: none;
-    transition: all 0.2s;
-}
-input:focus::placeholder {
-    color: rgba(0, 0, 0, 0.11);
-    transition: all 0.2s;
+        font-size: 150%;
+        font-weight: bolder;
+        transition: all 0.2s;
+    }
 
-}
-#formulario{
-    margin-top: 1%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-}
+    .botao:hover {
+        height: 7vh;
+        width: 22vw;
+    }
 
-.botao{
-    background-color: rgb(105, 163, 255);   
-    border-radius: 50px;
-    border: 0;
-    height: 5vh;
-    width: 20vw;
-    text-align: center;
-    box-shadow: 5px 5px 5px rgba(150, 191, 255, 0.685);
-    color: white;
-    font-size: 150%;
-    font-weight: bolder;
-    transition: all 0.2s;
-}
-.botao:hover{
-    height: 7vh;
-    width: 22vw;
-    background-color: rgba(0, 52, 141, 0.37);  
-}
-#envia{
-    background-color: rgb(35, 84, 163);
-}
-#envia:hover{
-    background-color: rgba(0, 52, 141, 0.37);  
-}
-#nomeH{
-    font-size: 39.6px;
-    margin-bottom: 0;
-}
-#cargoH{
-    margin-top: 0;
-    font-size: 17.2px;
-    color: rgba(94, 94, 94, 0.685);
-}
-#empresaH{
-    font-size: 26.8px;
-    color: rgba(46, 46, 46, 0.685);
-}
-#emailH{
-    font-size: 22px;
-    color: rgba(46, 46, 46, 0.685);
-}
-#colorPicker{
-    width: 10px; 
-    height: 4.5vh; 
-    background-color: black;
-}
-#colorPicker:hover{
-    width: 30px; 
-    height: 4.7vh; 
-    background-color: rgba(0, 0, 0, 0.5);
-}
-header{
-    display: flex;
-    flex-direction: column;
+    #nomeH {
+        font-size: 39.6px;
+        margin-bottom: 0;
+    }
 
-}
-@media print {
-  body * {
-    visibility: hidden;
-  }
-  #carta, #carta * {
-    visibility: visible;
-  }
-  #carta {
-    position: fixed;
-    left: 0;
-    top: 0;
-  }
-}
+    #cargoH {
+        margin-top: 0;
+        font-size: 17.2px;
+        color: rgba(94, 94, 94, 0.685);
+    }
+
+    #empresaH {
+        font-size: 26.8px;
+        color: rgba(46, 46, 46, 0.685);
+    }
+
+    #emailH {
+        font-size: 22px;
+        color: rgba(46, 46, 46, 0.685);
+    }
+
+    #colorPicker {
+        width: 20px;
+        height: 4.5vh;
+    }
+
+    #colorPicker:hover {
+        width: 30px;
+        height: 4.7vh;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+
+    }
+
+    #Dark {
+        background-color: rgba(0, 16, 158, 0.5);
+        border-radius: 50%;
+        border: 0;
+        height: 2rem;
+        transition: all 0.2s;
+        box-shadow: 2px 2px 5px rgba(150, 191, 255, 0.685);
+    }
+    #Light{
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        border: 0;
+        height: 2rem;
+        transition: all 0.2s;
+        box-shadow: 2px 2px 5px rgba(150, 191, 255, 0.685);
+    }
+    #Dark:hover {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    #Light:hover{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    @media print {
+        body * {
+            visibility: hidden;
+        }
+
+        #carta,
+        #carta * {
+            visibility: visible;
+        }
+
+        #carta {
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+    }

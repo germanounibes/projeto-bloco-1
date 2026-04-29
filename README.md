@@ -18,7 +18,7 @@ Projeto desenvolvido como parte do **Bloco 01 — Base Sólida** do plano de est
 - [x] Preview ao vivo do cartão enquanto o usuário digita
 - [x] Seletor de paleta de cores / tema do cartão
 - [x] Download do cartão
-- [ ] Modo claro / escuro na interface
+- [x] Modo claro / escuro na interface
 
 ---
 
@@ -54,6 +54,6 @@ card-gen/
 
 ### Fase 3 — exportação e polish
 - [x] Implementar download
-- [ ] Adicionar modo claro/escuro
+- [x] Adicionar modo claro/escuro
 - [x] Deploy no GitHub Pages
 
