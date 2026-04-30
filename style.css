@@ -61,16 +61,21 @@ main{
     align-items: center;
 }
 #carta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
+
     background-color: white;
     width: 105mm;
     height: 75mm;
-    border-radius: 20px;
-    justify-content: center;
-    align-items: center;
-    padding: 3%;
-    font-weight: bolder;
-    box-shadow: inset 25px 25px var(--carta-sombra), 5px 5px 5px var(--cor-sombra);
+    border-radius: 12px;
+    padding: 8mm 6mm;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: 5px solid var(--carta-sombra);
+    box-shadow: 5px 5px 5px var(--cor-sombra);
     transition: all 0.2s;
 }
 
@@ -129,17 +134,14 @@ input:focus::placeholder {
 #cargoH {
     margin-top: 0;
     font-size: 17.2px;
-    color: var(--cor-texto-medio);
 }
 
 #empresaH {
     font-size: 26.8px;
-    color: var(--cor-texto-escuro);
 }
 
 #emailH {
     font-size: 22px;
-    color: var(--cor-texto-escuro);
 }
 
 #colorPicker {

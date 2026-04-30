@@ -1,9 +1,9 @@
 //sistema dos valores do formulario
 function fun() {
-    var nomeV = document.getElementById('nome').value;
-    var cargoV = document.getElementById('cargo').value;
-    var empresaV = document.getElementById('empresa').value;
-    var emailV = document.getElementById('email').value;
+    let nomeV = document.getElementById('nome').value;
+    let cargoV = document.getElementById('cargo').value;
+    let empresaV = document.getElementById('empresa').value;
+    let emailV = document.getElementById('email').value;
 
     document.getElementById('nomeH').innerText = (nomeV);
     document.getElementById('cargoH').innerText = (cargoV);
@@ -38,3 +38,8 @@ function modoClaro() {
     root.setProperty("--cor-sombra", "rgba(150, 191, 255, 0.685)");
     document.body.classList.remove("dark");
 }
+
+//update automatico
+['nome', 'cargo', 'empresa', 'email'].forEach(id => {
+    document.getElementById(id).addEventListener('input', fun);
+});
