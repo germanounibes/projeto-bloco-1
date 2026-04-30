@@ -1,186 +1,229 @@
-    html {
-        height: 100%;
+:root {
+    --cor-primaria: #2758c4;
+    --cor-acento: rgb(105, 163, 255);
+    --cor-sombra: rgba(150, 191, 255, 0.685);
+    --cor-label: #000000;
+    --cor-label-hover: #007bff;
+    --cor-dark-btn: rgba(0, 16, 158, 0.5);
+    --cor-light-btn: rgba(0, 0, 0, 0.5);
+    --carta-sombra: rgba(55, 132, 255, 0.685);
+}
+
+::selection {
+    background-color: black;
+    color: white;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(163, 203, 238);
+    position: relative;
+    transition: background-color 0.4s ease;
+    background-attachment: fixed;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+body::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(135deg, #121212 0%, #1a2a6c 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+    pointer-events: none;
+}
+
+body.dark::after {
+    opacity: 1;
+    background-image: linear-gradient(135deg, #121212 0%, #1a2a6c 100%);
+}
+
+h1 {
+    margin: 1px 0px 0px 0px;
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--cor-primaria);
+}
+
+#carta {
+    text-align: center;
+    background-color: white;
+    width: 105mm;
+    height: 75mm;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    font-weight: bolder;
+    box-shadow: inset 25px 25px var(--carta-sombra), 5px 5px 5px var(--cor-sombra);
+    transition: all 0.2s;
+}
+
+input {
+    border-radius: 50px;
+    border: 0;
+    height: 5vh;
+    width: 30vw;
+    text-align: center;
+    font-size: 110%;
+    box-shadow: 5px 5px 5px var(--cor-sombra);
+    transition: all 0.2s;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus::placeholder {
+    color: rgba(0, 0, 0, 0.11);
+    transition: all 0.2s;
+}
+
+#formulario {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.botao {
+    background-color: var(--cor-acento);
+    border-radius: 50px;
+    border: 0;
+    height: 5vh;
+    width: 20vw;
+    text-align: center;
+    box-shadow: 5px 5px 5px var(--cor-sombra);
+    color: white;
+    font-size: 150%;
+    font-weight: bolder;
+    transition: all 0.2s;
+}
+
+.botao:hover {
+    height: 7vh;
+    width: 22vw;
+}
+
+#nomeH {
+    font-size: 39.6px;
+    margin-bottom: 0;
+}
+
+#cargoH {
+    margin-top: 0;
+    font-size: 17.2px;
+    color: var(--cor-texto-medio);
+}
+
+#empresaH {
+    font-size: 26.8px;
+    color: var(--cor-texto-escuro);
+}
+
+#emailH {
+    font-size: 22px;
+    color: var(--cor-texto-escuro);
+}
+
+#colorPicker {
+    width: 20px;
+    height: 4.5vh;
+}
+
+#colorPicker:hover {
+    width: 30px;
+    height: 4.7vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+main{
+    display: flex;
+    width: 100%;
+}
+#formudiv{
+    margin: 2%;
+    display: flex;
+    width: 50%;
+    justify-content: left;
+    padding: 2%;
+}
+#cardiv{
+    margin: 2%;
+    display: flex;
+    width: 50%;
+    justify-content: left;
+    align-items: center;
+}
+#Dark {
+    background-color: var(--cor-dark-btn);
+    border-radius: 50%;
+    border: 0;
+    height: 2rem;
+    transition: all 0.2s;
+    box-shadow: 2px 2px 5px var(--cor-sombra);
+}
+
+#Light {
+    background-color: var(--cor-light-btn);
+    border-radius: 50%;
+    border: 0;
+    height: 2rem;
+    transition: all 0.2s;
+    box-shadow: 2px 2px 5px var(--cor-sombra);
+}
+
+#Dark:hover {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+#Light:hover {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--cor-label);
+    transition: all 0.3s;
+}
+
+label:hover {
+    color: var(--cor-label-hover);
+}
+
+@media print {
+    body * {
+        visibility: hidden;
     }
 
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        font-family: Arial, Helvetica, sans-serif;
-        background-image: linear-gradient(135deg, #f5f7fa 0%, rgb(150, 191, 255) 100%);
-        background-attachment: fixed;
-        min-height: 100vh;
-        background-repeat: no-repeat;
-        margin: 0;
-
-        ::selection {
-            background-color: black;
-            color: white;
-        }
-    }
-
-    h1 {
-        margin: 1px 0px 0px 0px;
-        font-size: 4rem;
-        font-weight: 800;
-        color: #2758c4;
+    #carta,
+    #carta * {
+        visibility: visible;
     }
 
     #carta {
-        text-align: center;
-        background-color: rgba(240, 248, 255, 0.788);
-        width: 85mm;
-        height: 55mm;
-        border-radius: 20px;
-        padding: 3%;
-        font-weight: bolder;
-        box-shadow: 5px 5px 5px rgba(150, 191, 255, 0.685);
-        box-shadow: inset 25px 25px rgba(55, 132, 255, 0.685);
-        transition: all 0.2s;
+        position: fixed;
+        left: 0;
+        top: 0;
     }
-
-    input {
-        border-radius: 50px;
-        border: 0;
-        height: 5vh;
-        width: 30vw;
-        text-align: center;
-        font-size: 110%;
-        box-shadow: 5px 5px 5px rgba(150, 191, 255, 0.685);
-        transition: all 0.2s;
-    }
-
-    input:focus {
-        outline: none;
-        transition: all 0.2s;
-    }
-
-    input:focus::placeholder {
-        color: rgba(0, 0, 0, 0.11);
-        transition: all 0.2s;
-
-    }
-
-    #formulario {
-        margin-top: 1%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-    }
-
-    .botao {
-        background-color: rgb(105, 163, 255);
-        border-radius: 50px;
-        border: 0;
-        height: 5vh;
-        width: 20vw;
-        text-align: center;
-        box-shadow: 5px 5px 5px rgba(150, 191, 255, 0.685);
-        color: white;
-        font-size: 150%;
-        font-weight: bolder;
-        transition: all 0.2s;
-    }
-
-    .botao:hover {
-        height: 7vh;
-        width: 22vw;
-    }
-
-    #nomeH {
-        font-size: 39.6px;
-        margin-bottom: 0;
-    }
-
-    #cargoH {
-        margin-top: 0;
-        font-size: 17.2px;
-        color: rgba(94, 94, 94, 0.685);
-    }
-
-    #empresaH {
-        font-size: 26.8px;
-        color: rgba(46, 46, 46, 0.685);
-    }
-
-    #emailH {
-        font-size: 22px;
-        color: rgba(46, 46, 46, 0.685);
-    }
-
-    #colorPicker {
-        width: 20px;
-        height: 4.5vh;
-    }
-
-    #colorPicker:hover {
-        width: 30px;
-        height: 4.7vh;
-    }
-
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-
-    }
-
-    #Dark {
-        background-color: rgba(0, 16, 158, 0.5);
-        border-radius: 50%;
-        border: 0;
-        height: 2rem;
-        transition: all 0.2s;
-        box-shadow: 2px 2px 5px rgba(150, 191, 255, 0.685);
-    }
-
-    #Light {
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 50%;
-        border: 0;
-        height: 2rem;
-        transition: all 0.2s;
-        box-shadow: 2px 2px 5px rgba(150, 191, 255, 0.685);
-    }
-
-    #Dark:hover {
-        height: 2.5rem;
-        width: 2.5rem;
-    }
-
-    #Light:hover {
-        height: 2.5rem;
-        width: 2.5rem;
-    }
-
-    label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 8px;
-        color: #000000;
-        transition: all 0.3s;
-    }
-
-    label:hover {
-        color: #007bff;
-    }
-
-    @media print {
-        body * {
-            visibility: hidden;
-        }
-
-        #carta,
-        #carta * {
-            visibility: visible;
-        }
-
-        #carta {
-            position: fixed;
-            left: 0;
-            top: 0;
-        }
-    }
+}

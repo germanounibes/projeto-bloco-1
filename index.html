@@ -17,35 +17,41 @@
             <button onclick="modoClaro()" id="Light"><img src="sun.png" alt="light" height="20rem"></button>
         </section>
     </header>
-    <section id="formulario">
-        <form id="meuForm">
-            <label for="nome">Nome:</label>
-                <input type=" text" id="nome" name="nome" placeholder="Nome"><br><br>
-            <label for="cargo">Cargo:</label>
-                <input type="text" id="cargo" name="cargo" placeholder="Cargo"><br><br>
-            <label for="empresa">Empresa</label>
-                <input type="text" id="empresa" name="empresa" placeholder="Nome da Empresa"><br><br>
-            <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="E-mail"><br><br>
-        </form>
-        <button class="botao" onclick="fun()">Enviar</button>
+    <main>
+        <div id="formudiv">
+            <section id="formulario">
+                <form id="meuForm">
+                    <label for="nome">Nome:</label>
+                    <input type=" text" id="nome" name="nome" placeholder="Nome"><br><br>
+                    <label for="cargo">Cargo:</label>
+                    <input type="text" id="cargo" name="cargo" placeholder="Cargo"><br><br>
+                    <label for="empresa">Empresa</label>
+                    <input type="text" id="empresa" name="empresa" placeholder="Nome da Empresa"><br><br>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="E-mail"><br><br>
+                </form>
+                <button class="botao" onclick="fun()">Enviar</button>
+                <br>
+                <button class="botao" onclick="window.print()" id="envia">Imprimir</button>
+                <br>
+                <input type="color" id="colorPicker" value="#000000">
+            </section>
+        </div>
         <br>
-        <button class="botao" onclick="window.print()" id="envia">Imprimir</button>
-        <br>
-        <input type="color" id="colorPicker" value="#000000">
-    </section>
-    <br>
-    <section id="carta">
-        <h2 id="nomeH">Nome Completo</h2>
+        <div id="cardiv">
+            <section id="carta">
+                <h2 id="nomeH">Nome Completo</h2>
 
-        <p id="cargoH">Seu Cargo</p>
+                <p id="cargoH">Seu Cargo</p>
 
-        <section class="info">
-            <span id="empresaH">Nome da Empresa</span>
-            <br>
-            <span id="emailH">seu@email.com</span>
-        </section>
-    </section>
+                <section class="info">
+                    <span id="empresaH">Nome da Empresa</span>
+                    <br>
+                    <span id="emailH">seu@email.com</span>
+                </section>
+            </section>
+        </div>
+    </main>
     <br><br>
     <script src="script.js">
     </script>
