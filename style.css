@@ -127,21 +127,35 @@ input:focus::placeholder {
 }
 
 #nomeH {
-    font-size: 39.6px;
-    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: 800;
+    color: #111;
+    margin: 0;
+    letter-spacing: -0.3px;
 }
 
 #cargoH {
-    margin-top: 0;
-    font-size: 17.2px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--cor-primaria);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 4px 0 0 0;
 }
 
 #empresaH {
-    font-size: 26.8px;
+    font-size: 13px;
+    color: #555;
+    font-weight: 600;
+    margin: 0;
 }
 
 #emailH {
-    font-size: 22px;
+    font-size: 11px;
+    color: #999;
+    font-weight: 400;
+    font-family: monospace;
+    margin: 3px 0 0 0;
 }
 
 #colorPicker {
